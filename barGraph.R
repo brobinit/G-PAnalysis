@@ -1,3 +1,16 @@
+# barGraph.R
+# written by Blaire Robinson
+#
+# Description: reads in a .txt file summarizing data from the PMAnalyzer pipeline (written
+# by Daniel Cuevas) and outputs and clustered bar graph comparing growth level between 
+# samples accross tested substrates.
+#
+# Imput file: a text file with Sample name, well ID, compound tested, and associated 
+# growth level. 
+#
+# After bar graph is created, user can save in format desired.
+
+
 library(ggplot2)
 library(reshape2)
 library(ggthemes)
@@ -9,7 +22,7 @@ library(mvtnorm)
 #file selection
 data <- read.table("~/Documents/SDSU_Grad/2/spring2016/Thesis/Figures/Analysis_2016mar23/Vcyclitrophicus_params_average_seq.txt", header=T, sep="\t")
 
-# Grab only the sample name, well ID, and growth level and
+# Grab only the sample name, well ID, compound tested, and growth level and
 # create a data frame:
 # SampleName | A1 | A2 | ...
 # Each cell holds the growth level

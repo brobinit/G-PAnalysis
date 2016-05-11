@@ -1,3 +1,6 @@
+#Written by Genivaldo Silva
+
+#Change to output of og.pl
 OG="14051.OGs.txt"
 
 f=open(OG)

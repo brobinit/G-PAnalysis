@@ -1,3 +1,5 @@
+# Written by Genivaldo Silva
+
 import os
 
 for myfile in [i for i in os.listdir(os.curdir) if ".xls" in i]:
