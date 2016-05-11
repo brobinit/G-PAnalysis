@@ -67,7 +67,7 @@ df$sample <- row.order.names
 df.melt <- melt(df, id.vars=c("sample"), variable.name="well", value.name="growthlevel")
 df.melt$sample <- factor(df.melt$sample, levels=row.order.names)
 
-
+#create associated bar graph. 
 bar <- ggplot(data=df.melt, aes(x=factor(well), y=growthlevel, fill=sample)) + 
   geom_bar(stat='identity', position=position_dodge()) +
   theme_minimal() + 
